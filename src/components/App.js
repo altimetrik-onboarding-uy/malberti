@@ -1,28 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import TitleBar from './TitleBar';
-import Main from './Main'
+//component imports
+import Nav from './Nav';
+import Container from './Container';
 
-class App extends Component{
-
-    constructor(){
-        super();
-        this.state = {
-            user: 'Martin'
-        }
-    }
-
-    render(){
-
-
-        return(
-            <div>
-                <TitleBar user={this.state.user}/>
-                
-                <Main/>
-            </div>
-        )
-    }
+function App() {
+  return (
+    <div>
+        <Nav/>
+        <Container/>
+    </div>
+  );
 }
 
 export default App;
+
+
+
