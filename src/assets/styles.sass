@@ -1,3 +1,6 @@
+
+$errColor: #F22B22
+
 nav
     box-shadow: 0 0px 15px #2d2d2d
     h1,h2,h3,h4
@@ -6,11 +9,23 @@ nav
         color: #cccccc
         text-decoration: underline
         font-size: 12px
-    
+        &.error
+            text-decoration: none
+            color: $errColor
+            margin: 0
+p
+    &.error
+        font-size: 12px
+        text-decoration: none
+        color: $errColor
+        margin: 1rem 0
 .jumbotron
     transition: .3s all ease
     &:hover
         box-shadow: 0px 0px 25px #585858
+    h1
+        font-size: 21px
+        
 
 .newCardForm
     input
@@ -28,3 +43,4 @@ nav
     &:hover
         transform: translateY(-5px)
         text-shadow: 0px 0px 10px #585858
+
