@@ -1,19 +1,44 @@
 import React from 'react';
 
-//component imports
-import Nav from './Nav';
-import Container from './Container';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div>
-        <Nav/>
-        <Container/>
-    </div>
-  );
+import LoginPanel from './logPanel';
+import Home from './Home';
+
+
+class App extends React.Component{
+    constructor(props){
+        super(props)
+        this.state ={
+            isLogged: this.props.logged
+        }
+    }
+
+    logPanel(){
+        return (
+            <div className="container my-5">
+                <div className="row">
+                    <div className="col-6 mx-auto">
+                        <LoginPanel/>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    render(){
+        return(
+            <div>
+                {this.props.logged ? <Home/> : this.logPanel()}
+            </div>
+        )
+    }
 }
 
-export default App;
+function mapStateToProps(state){
+    return{
+        logged: state.loggedUser
+    }
+}
 
-
-
+export default connect(mapStateToProps)(App);

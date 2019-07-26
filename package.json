@@ -1,19 +1,16 @@
 {
-  "name": "boardy",
+  "name": "loggy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "immutability-helper": "^3.0.1",
-    "node-sass": "^4.12.0",
     "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-dnd": "^9.0.1",
-    "react-dnd-cjs": "^9.0.1",
-    "react-dnd-html5-backend": "^9.0.1",
-    "react-dnd-html5-backend-cjs": "^9.0.1",
+    "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-redux": "^7.1.0",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
